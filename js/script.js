@@ -78,3 +78,30 @@ for (let i = 0; i < cardArr.length; i++){
 
 }
 
+const newMembSect = document.querySelector(".new-members");
+
+const formElem = document.getElementById("addMemb");
+const nameInput = document.getElementById("newName");
+const roleInput = document.getElementById("newRole");
+const mailInput = document.getElementById("newMail");
+const imgInput = document.getElementById("newImg");
+
+formElem.addEventListener("submit", function (event) {
+
+  event.preventDefault();
+
+  const newMember = {
+    name: nameInput.value,
+    role: roleInput.value,
+    email: mailInput.value,
+    img: imgInput.value
+  }
+
+  newMembSect.innerHTML += `
+  <div class="col-12 col-md-6 col-lg-4 mt-5" id="male3" >
+
+    ${fillCard(newMember)}
+
+            </div>
+  `
+})
