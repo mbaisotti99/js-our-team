@@ -98,7 +98,7 @@ formElem.addEventListener("submit", function (event) {
   }
 
   newMembSect.innerHTML += `
-  <div class="col-12 col-md-6 col-lg-4 mt-5" id="male3" >
+  <div class="col-12 col-md-6 col-lg-4 mt-5">
 
     ${fillCard(newMember)}
 
